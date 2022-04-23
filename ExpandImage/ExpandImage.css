@@ -1,0 +1,10 @@
+.collapseImg {
+    height: 300px;
+    width: 100px;
+    border-radius: 50px;
+}
+.expandImg{
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+}
