@@ -1,8 +1,9 @@
 const imgClick = function(event){
-    var target = event.currentTarget.className;
-    document.querySelectorAll('img').forEach(item => item.className = "collapseImg");
-    target = target == "collapseImg" ? "expandImg" : "collapseImg";
-    event.currentTarget.className = target;
+    var target = event.currentTarget.classList;
+    document.getElementsByClassName('expandImg')[0].classList.remove('expandImg');
+    if(!target.contains('expandImg')){
+      event.currentTarget.classList.add('expandImg');
+    }
   };
 
   const images = [
@@ -14,8 +15,8 @@ const imgClick = function(event){
   ];
 
   images.forEach((imgObj, index) => {
-    var cssClass = index == 0 ? 'expandImg' : 'collapseImg';
-    var innerHTML = `<img class="${cssClass}" class="collapseImg" src="${imgObj.imgsrc}" onclick="imgClick(event)"/>`
+    var cssClass = index == 0 ? ' expandImg' : '';
+    var innerHTML = `<img class="imgMaster${cssClass}" src="${imgObj.imgsrc}" onclick="imgClick(event)"/>`
     document.getElementsByTagName('body')[0].innerHTML += innerHTML;
   });
 

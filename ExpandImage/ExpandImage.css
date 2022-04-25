@@ -1,14 +1,10 @@
-.collapseImg {
+.imgMaster{
     height: 800px;
-    width: 150px;
     border-radius: 50px;
     cursor: pointer;
     margin: 20px;
+    width: 150px;
 }
 .expandImg{
-    height: 800px;
     width: 600px;
-    border-radius: 50px;
-    cursor: pointer;
-    margin: 20px;
 }
