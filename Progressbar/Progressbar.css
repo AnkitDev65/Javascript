@@ -1,0 +1,25 @@
+.progressLine{
+    width: 150px;
+    height: 5px;
+    border: 2px solid grey;
+    /* display: inline; */
+    float: left;
+    margin-top: 10px;
+    margin-left: -3px;
+    background-color: lightgray;
+    margin-right: -3px;
+}
+.progressCircle{
+    border-radius: 20px;
+    /* display: inline; */
+    border: 5px solid grey;
+    width: 20px;
+    height: 20px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+.stepDone{
+    background-color: lightgreen;
+    border-color: green;
+}
