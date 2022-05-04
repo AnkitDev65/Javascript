@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let arr1 = [4, 5, 1, 2];
+        const reverseArray = (arr) => {
+            var len = arr.length;
+            for (var i = 0; i < len / 2; i++) {
+
+                var swap = arr[i];
+                arr[i] = arr[len - 1 - i];
+                arr[len - 1 - i] = swap;
+            }
+
+
+            alert(arr);
+        };
+        reverseArray(arr1);
+    </script>
+</head>
+
+<body>
+    <pre>
+        Write a function to reverse an array 
+        Input :  [4, 5, 1, 2];
+        Output : [2, 1, 5, 4]
+
+        Algo----
+            1. loop through from 0 to n/2
+            2. swap arr[i] and arr[n-1];
+            
+
+        let arr1 = [4, 5, 1, 2];
+        const reverseArray = (arr) => {
+        var len = arr.length;
+        for (var i = 0; i < len/2; i++) {
+            var swap = arr[i];
+            arr[i] = arr[len-1-i];
+            arr[len-1-i] = swap;
+        }
+            
+        alert(arr);
+        };
+        reverseArray(arr1);
+    </pre>
+</body>
+
+</html>

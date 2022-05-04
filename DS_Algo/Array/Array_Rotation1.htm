@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6];
+
+        function rotate(arr, d, n) {
+            d = d%n;
+            if(d==0){
+                alert(arr);
+                return;    
+            }
+            for (var i = 0; i < d / 2; i++) {
+                var swap = arr[i];
+                arr[i] = arr[d - 1 - i];
+                arr[d - i - 1] = swap;
+            }
+            for (var i = d, j = 0; i <= n / 2; i++, j++) {
+                var swap = arr[i];
+                arr[i] = arr[n - 1 - j];
+                arr[n - 1 - j] = swap;
+            }
+            for (var i = 0; i < n / 2; i++) {
+                var swap = arr[i];
+                arr[i] = arr[n - 1 - i];
+                arr[n - 1 - i] = swap;
+            }
+            alert(arr);
+        }
+        rotate(arr, 2, 6);
+    </script>
+</head>
+
+<body>
+    <pre>
+        Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements. 
+        iput [1,2,3,4,5,6] 
+        rotate it by 2 indexes
+
+        Algo----
+            1. Optimize the rotation count. do d= d%n;
+            2. if rotation count d is 0 then do nothing. Else
+            3. reverse(arr[], 1, d) ;
+            4. reverse(arr[], d + 1, n);
+            5. reverse(arr[], 1, n);
+
+        let arr = [1, 2, 3, 4, 5, 6];
+
+        function rotate(arr, d, n) {
+            d = d%n;
+            if(d==0){
+                alert(arr);
+                return;    
+            }
+            for (var i = 0; i < d / 2; i++) {
+                var swap = arr[i];
+                arr[i] = arr[d - 1 - i];
+                arr[d - i - 1] = swap;
+            }
+            for (var i = d, j = 0; i <= n / 2; i++, j++) {
+                var swap = arr[i];
+                arr[i] = arr[n - 1 - j];
+                arr[n - 1 - j] = swap;
+            }
+            for (var i = 0; i < n / 2; i++) {
+                var swap = arr[i];
+                arr[i] = arr[n - 1 - i];
+                arr[n - 1 - i] = swap;
+            }
+            alert(arr);
+        }
+        rotate(arr, 2, 6);
+    </pre>
+</body>
+
+</html>
